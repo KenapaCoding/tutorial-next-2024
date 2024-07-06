@@ -13,7 +13,8 @@ export const generateMetadata = ({params}: Props):Metadata => {
     }
 }
 
-export default function Note ({params}:Props) {
+export default function Note ({params, searchParams}:any) {
+    console.log(searchParams)
     if(parseInt(params.noteId)>100) {
         notFound()
     }
